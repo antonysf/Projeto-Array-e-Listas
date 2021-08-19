@@ -19,5 +19,4 @@ fun main() {
     println("--------------------------------------------------------------")
     val resultIntersect = funcionario3.intersect(funcionario2)
     resultIntersect.forEach{println(it)}
-
 }
