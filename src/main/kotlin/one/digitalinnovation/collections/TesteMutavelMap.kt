@@ -9,8 +9,16 @@ fun main() {
     val repositorio = Repositorio<Funcionario>()
 
     repositorio.create(joao.nome, joao)
-    repositorio.create(pedro.nome, joao)
-    repositorio.create(maria.nome, joao)
+    repositorio.create(pedro.nome, pedro)
+    repositorio.create(maria.nome, maria)
 
     println(repositorio.findById(joao.nome))
+
+    println("----------------------------------------------------------------")
+    repositorio.findAll().forEach { println(it) }
+
+    println("----------------------------------------------------------------")
+    (repositorio.remove(maria.nome))
+    repositorio.findAll().forEach { println(it) }
+
 }
